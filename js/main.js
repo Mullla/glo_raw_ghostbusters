@@ -3,6 +3,23 @@ $(document).ready(function() {
   const mMenu = $(".m-menu");
   const tab = $(".tab");
 
+  const overlay = $(".overlay");
+  const demo = $(".demo-modal");
+  const demoBtns = $(".demo-btn");
+  const modalBtn = $(".modal-btn");
+
+  overlay.hide();
+  demo.hide();
+
+  demoBtns.on('click',function(){
+    overlay.show();
+    demo.show();
+  });
+
+  modalBtn.on('click', function(){
+    overlay.hide();
+    demo.hide();
+  });
 
   mMenuBtn.on('click', function(){
     mMenu.toggleClass('active');
